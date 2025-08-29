@@ -1,11 +1,15 @@
-function App() {
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import UserLayout from "./components/Layout/userLayout";
+
+
+const App = () => {
   return (
-    <div className="h-screen flex items-center justify-center bg-gray-900">
-      <h1 className="text-4xl font-bold text-green-400">
-        Tailwind is working 🚀
-      </h1>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<UserLayout />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
